@@ -37,7 +37,7 @@ def get_data(value=0,mode='util'):
     return base_data
 
 def get_temperature():
-    temp = round(psutil.sensors_temperatures()['nct6687'][0].current)
+    temp = round(psutil.sensors_temperatures()['k10temp-pci-00c3'][0].current)
     return get_data(value=temp,mode='temp')
 def get_utils():
     utils= round(psutil.cpu_percent())
